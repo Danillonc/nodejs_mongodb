@@ -1,0 +1,19 @@
+{
+  "name": "portal",
+  "version": "1.0.0",
+  "description": "portal de noticias",
+  "main": "noticias.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danillonc/nodejs_mongodb.git"
+  },
+  "author": "danillonc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danillonc/nodejs_mongodb/issues"
+  },
+  "homepage": "https://github.com/Danillonc/nodejs_mongodb#readme"
+}
