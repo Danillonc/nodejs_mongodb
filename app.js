@@ -1,11 +1,6 @@
-var app = require('./config/server');
+var app = require('./config/server'); //module server.js
 
-/*var rotaNoticias = require('./app/routes/noticias')(app);
-
-var rotaHome = require('./app/routes/home')(app);
-
-var rotaFormularioInclusaoNoticia = require('./app/routes/formulario_inclusao_noticia')(app);*/
-
+/*initialize app on 3000 port localhost*/
 app.listen(3000, function(){
 	console.log('Servidor ON');
 });
