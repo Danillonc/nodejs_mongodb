@@ -5,14 +5,13 @@ module.exports = function(application){
   });
 
   application.post('/noticias/salvar', function(req, res){
-  	var noticias = req.body;
-    res.send(noticias);
+  	var noticia = req.body;
 
     var connection = application.config.dbConnection(); //getting the module dbConnection instantied on app variable.
     var noticiasModel = application.app.models.noticiasModel; //getting module noticiasModel instantied on app variable.
 
-    noticiasModel.salvarNoticia(connection, function(error, result){
-       res.render("noticias/noticias", {noticias : result});
+    noticiasModel.salvarNoticia(noticia, connection, function(error, result){
+       res.redirect('/noticias');
     });
 
   });
