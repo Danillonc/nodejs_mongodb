@@ -8,10 +8,10 @@ module.exports = function(application){
   	var noticia = req.body;
 
     var connection = application.config.dbConnection(); //getting the module dbConnection instantied on app variable.
-    var noticiasModel = application.app.models.noticiasModel; //getting module noticiasModel instantied on app variable.
+    var noticiasModel = new application.app.models.noticiasDAO(connection); //getting module noticiasModel instantied on app variable.
 
-    noticiasModel.salvarNoticia(noticia, connection, function(error, result){
-       console.log(error);
+    noticiasModel.salvarNoticia(noticia, function(error, result){
+       console.log('callback salvar noticia error : '+error);
        res.redirect('/noticias');
     });
 
