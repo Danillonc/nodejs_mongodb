@@ -13,6 +13,7 @@ module.exports = function(){
     this.salvarNoticia = function(noticia, connection, callback){
     	console.log(noticia);
         connection.query('insert into noticias set ?', noticia, callback); 
+        
     }
 	return this;
 }

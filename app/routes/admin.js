@@ -11,6 +11,7 @@ module.exports = function(application){
     var noticiasModel = application.app.models.noticiasModel; //getting module noticiasModel instantied on app variable.
 
     noticiasModel.salvarNoticia(noticia, connection, function(error, result){
+       console.log(error);
        res.redirect('/noticias');
     });
 
