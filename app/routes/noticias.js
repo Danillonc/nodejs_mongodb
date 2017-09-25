@@ -1,14 +1,11 @@
 module.exports = function(application){
 
  application.get('/noticias', function(req, res){  
-   
-   var connection = application.config.dbConnection(); //getting the module dbConnection instantied on app variable.
-   var noticiasModel = new application.app.models.noticiasDAO(connection); //getting module noticiasModel instantied on app variable.
+    application.app.controllers.noticias.listar_noticias(application,req,res);
+  });
 
-   noticiasModel.getNoticias(function(error, result){
-       res.render("noticias/noticias", {noticias : result});
-   });
-    
+ application.get('/noticia', function(req, res){  
+    application.app.controllers.noticias.listar_noticia(application,req,res);
   });
 }
 
