@@ -1,2 +1,2 @@
 # nodejs_mongodb
-Repository to mongodb courses and projects
+Repository for nodejs project. This project is a news gallery.
